@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main {
+    display: flex;
+/*     justify-content: center; */
+    align-items: center;
+    margin-top: 18rem;
+/*     height: 100vh; */
+    height: calc(100vh - 10rem);
+    width: min(100% - 3rem, 65ch);
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.6rem;
+    color: rgb(57, 57, 55);
+    margin-bottom: 0.6rem;
+}
+
+button {
+    border-radius: 7px;
+    font-size: 1rem;
+    color : white;
+    margin-top: 0.3rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+    padding: 4px 8px 4px 8px;
+    outline: none;
+    border-style: none;
+    background-color: #7d53cc;
+    transition: background-color 0.3s;
+}
+button:is(:hover, :focus) {
+    background-color: rgb(119, 0, 255);
+    cursor: pointer;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: min(100% - 1rem, 40ch);
+    background-color: hsla(0, 0%, 100%, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px 4px rgb(63, 131, 214);
+    transition: box-shadow 0.2s;
+}
+.main-content:hover {
+    box-shadow: 1px 1px 4px 4px rgb(219, 97, 97);
+}
+
+.form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+input {
+    color: #201e1e;
+    font-size: 1.2rem;
+    padding: 5px 0 5px 4px;
+    margin-bottom: 0.3rem;
+    border-radius: 7px;
+    border-style: none;
+    border: 2px solid #878181;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+    width: 100%;
+    transition: box-shadow 0.3s;
+}
+
+
+input:focus {
+    outline: none;
+    box-shadow: 2px 2px #878181;
+}
+
+.name {
+    position: absolute;
+    bottom: 3rem;
+}
+.name p{
+    text-align: center;
+    margin-top: 0.3rem;
+    color: darkblue;
+}
+
+.name code span {
+    color: rgb(128, 10, 255);
+    text-decoration: underline;
+    transition: all .3s;
+}
+.name code span:hover {
+    color: rgb(54, 0, 249);
+    text-decoration: none;
+    cursor: pointer;
+}
+.name code {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width : 387px) {
+    main .main-content form {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    input {
+        padding: 1px 0 2px 4px;
+        margin-bottom: 0.3rem;
+        font-size: 1.09rem;
+    }
+    button {
+        padding: 2px 4px 2px 4px;
+    }
+
+    .name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .name code {
+        font-size: 1rem;
+        
+    }
+    .name p{
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width : 250px) {
+    .name code {
+        font-size: 0.8rem;
+        
+    }
+    .name p{
+        font-size: 0.5rem;
+    }
+}
